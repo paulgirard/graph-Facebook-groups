@@ -1,0 +1,49 @@
+
+	
+   Graph Facebook Groups
+
+   graph facebook groups based on the common members
+   main developper : Paul Girard, médialab Sciences Po
+	repository : http://github.com/paulgirard/graph_group_facebook
+
+	licence : GPL v3
+
+	depedencies :
+
+		PyGexf lib : 
+		$easy_install pygexf
+		repository : http://github.com/paulgirard/pygexf
+	    documentation : http://packages.python.org/pygexf
+
+		Facebook API python lib : 
+		https://github.com/facebook/python-sdk
+
+		Facebook token : 
+		get a facebook app token : http://developers.facebook.com/docs/authentication/
+		the token should be in a file ./token
+
+		groups file : groups.csv
+		write the id, name and number of members of group to graph in a TSV (Tab Separated Values) file named groups.csv
+		id	name	nb members
+
+	usage :
+
+		python graph_group_facebook.py 
+
+	output : 
+		groups.gexf
+
+		a group to group weighted graph 
+		groups are linked by the amount of common numbers
+
+		groups_members.gexf
+
+		a group to member bi-partite graph
+		members are linked to groups they belong to
+
+   Respect privacy ! 
+ 		Watch out what you're doing with private life data !
+		Please comply with your country legislation regarding privacy.
+		The graph you are about to make with this lib should be anonymised before any publication.
+
+
